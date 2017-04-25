@@ -17,21 +17,21 @@ a {
   }
 }
 
-/* HEADER */
-.header_section {
-  background: url("../images/header_bg.jpg") no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 800px;
-    .header_content {
-      background-color: rgba(0, 0, 0, 0.42);
-      color: #dfeacc;
-      text-align: left;
-        h1 {
-          font-size: 40px;
-        }
-        h2 {
-          font-size: 34px;
-        }
-    }
+/* HEADER PARALLAX */
+
+
+/* CONTENT */
+.content {
+  height: 1500px;
+  h2 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 26px;
+  }
+  p {
+    text-align: center;
+    padding-top: 20px;
+  }
 }
