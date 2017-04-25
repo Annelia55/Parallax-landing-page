@@ -17,21 +17,33 @@ a {
   }
 }
 
-/* HEADER PARALLAX */
-
-
 /* CONTENT */
 .content {
   height: 1500px;
   h2 {
     text-align: center;
     border-bottom: 1px solid black;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 20px;
-    font-size: 26px;
+    font-size: 28px;
   }
   p {
     text-align: center;
     padding-top: 20px;
   }
 }
+
+/* HEADER PARALLAX */
+.model-box {
+  position: relative; // !!! making it the anchor for header parallaxing elements
+  height: 800px;
+  background-image: url(../images/bg-header.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  .logo {
+      margin-top: 200px;
+  }
+}
+
