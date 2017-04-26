@@ -12,7 +12,7 @@ $(window).scroll(function(){
     });
 
     $('.model').css({
-        'transform' : 'translate(0px, -'+ wScroll /16 +'%)' //with "-" the object move UP while scrolling
+        'transform' : 'translate(0px, -'+ wScroll /14 +'%)' //with "-" the object move UP while scrolling
     });
 
 });
