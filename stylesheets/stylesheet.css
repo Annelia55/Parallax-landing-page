@@ -98,9 +98,10 @@ a:hover {
 /* CONTENT */
 /* line 21, ../sass/stylesheet.scss */
 .content {
-  height: 1500px;
+  background-color: white;
+  height: 1490px;
 }
-/* line 23, ../sass/stylesheet.scss */
+/* line 24, ../sass/stylesheet.scss */
 .content h2 {
   text-align: center;
   border-bottom: 1px solid black;
@@ -108,24 +109,57 @@ a:hover {
   padding-bottom: 20px;
   font-size: 28px;
 }
-/* line 30, ../sass/stylesheet.scss */
+/* line 31, ../sass/stylesheet.scss */
 .content p {
   text-align: center;
   padding-top: 20px;
 }
 
 /* HEADER PARALLAX */
-/* line 37, ../sass/stylesheet.scss */
+/* line 38, ../sass/stylesheet.scss */
 .model-box {
   position: relative;
   height: 800px;
   background-image: url(../images/bg-header.jpg);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+  overflow: hidden;
 }
-/* line 45, ../sass/stylesheet.scss */
+/* line 47, ../sass/stylesheet.scss */
 .model-box .logo {
-  margin-top: 200px;
+  height: 150px;
+  width: 100%;
+  background-image: url(../images/logo-sm.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 35%;
+  margin-top: -75px;
 }
+/* line 57, ../sass/stylesheet.scss */
+.model-box .model {
+  width: 636px;
+  height: 600px;
+  background-image: url(../images/model.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 56%;
+  top: 300px;
+}
+/* line 66, ../sass/stylesheet.scss */
+.model-box .siluet {
+  width: 311px;
+  height: 800px;
+  background-image: url(../images/siluet-sm.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  position: absolute;
+  top: 80px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  /* For IE8 and earlier */
+}
+
+/* using images instead of background*/

@@ -19,7 +19,8 @@ a {
 
 /* CONTENT */
 .content {
-  height: 1500px;
+  background-color: white;
+  height: 1490px;
   h2 {
     text-align: center;
     border-bottom: 1px solid black;
@@ -38,12 +39,72 @@ a {
   position: relative; // !!! making it the anchor for header parallaxing elements
   height: 800px;
   background-image: url(../images/bg-header.jpg);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+  overflow: hidden; // !!! hide parts of parallaxing elements
   .logo {
-      margin-top: 200px;
+    height: 150px;
+    width: 100%;
+    background-image: url(../images/logo-sm.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 35%;
+    margin-top: -75px;
+  }
+  .model {
+    width: 636px;
+    height: 600px;
+    background-image: url(../images/model.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 56%;
+    top: 300px;
+  }
+  .siluet {
+    width: 311px;
+    height: 800px;
+    background-image: url(../images/siluet-sm.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    top: 80px;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
   }
 }
+
+
+
+
+/* using images instead of background*/
+
+//.model-box {
+//  position: relative; // !!! making it the anchor for header parallaxing elements
+//  height: 800px;
+//  background-image: url(../images/bg-header.jpg);
+//  background-repeat: repeat;
+//  background-size: cover;
+//  background-position: top center;
+//  background-attachment: fixed;
+//  .siluet {
+//    img {
+//      position: absolute;
+//      max-width: 300px;
+//      top: 30px;
+//      opacity: 0.8;
+//      filter: alpha(opacity=80); /* For IE8 and earlier */
+//    }
+//  }
+//  .logo {
+//    margin-top: 270px;
+//  }
+//  .model {
+//    img {
+//      position: relative;;
+//    }
+//  }
+//}
 
