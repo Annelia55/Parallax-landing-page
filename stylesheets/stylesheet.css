@@ -137,8 +137,9 @@ a:hover {
   position: absolute;
   top: 35%;
   margin-top: -75px;
+  right: 3%;
 }
-/* line 57, ../sass/stylesheet.scss */
+/* line 58, ../sass/stylesheet.scss */
 .model-box .model {
   width: 636px;
   height: 600px;
@@ -148,7 +149,7 @@ a:hover {
   left: 56%;
   top: 300px;
 }
-/* line 66, ../sass/stylesheet.scss */
+/* line 67, ../sass/stylesheet.scss */
 .model-box .siluet {
   width: 311px;
   height: 800px;
