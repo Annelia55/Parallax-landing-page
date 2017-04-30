@@ -8,7 +8,7 @@ $(window).scroll(function(){
     });
 
     $('.siluet').css({
-        'transform' : 'translate(0px, '+ wScroll /4 +'%)'
+        'transform' : 'translate(0px, '+ wScroll /6 +'%)'
     });
 
     $('.model').css({

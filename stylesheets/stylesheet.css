@@ -119,8 +119,8 @@ a:hover {
 /* line 38, ../sass/stylesheet.scss */
 .model-box {
   position: relative;
-  height: 530px;
-  background-image: url(../images/bg-header.jpg);
+  height: 540px;
+  background-image: url(../images/bg-header-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -143,7 +143,7 @@ a:hover {
 .model-box .model {
   position: absolute;
   max-width: 630px;
-  top: 100px;
+  top: 110px;
   right: 0px;
   bottom: 0;
 }
@@ -151,8 +151,40 @@ a:hover {
 .model-box .siluet {
   position: absolute;
   max-width: 250px;
-  left: 7%;
   opacity: 0.5;
   filter: alpha(opacity=50);
   /* For IE8 and earlier */
+}
+
+/* Periscope */
+/* line 74, ../sass/stylesheet.scss */
+.periscope {
+  margin-top: 100px;
+}
+/* line 76, ../sass/stylesheet.scss */
+.periscope .siluet-content {
+  height: 640px;
+  background-image: url("../images/siluet-periscope.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* CONTENT */
+/* line 85, ../sass/stylesheet.scss */
+.content {
+  background-color: white;
+  height: 700px;
+}
+/* line 88, ../sass/stylesheet.scss */
+.content h2 {
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 28px;
+}
+/* line 95, ../sass/stylesheet.scss */
+.content p {
+  text-align: center;
+  padding-top: 20px;
 }

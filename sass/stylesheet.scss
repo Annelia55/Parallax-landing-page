@@ -37,8 +37,8 @@ a {
 /* HEADER PARALLAX */
 .model-box {
     position: relative; // !!! making it the anchor for header parallaxing elements
-    height: 530px;
-    background-image: url(../images/bg-header.jpg);
+    height: 540px;
+    background-image: url(../images/bg-header-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -58,16 +58,43 @@ a {
   .model {
     position: absolute;
     max-width: 630px;
-    top: 100px;
+    top: 110px;
     right: 0px;
     bottom: 0;
   }
   .siluet {
     position: absolute;
     max-width: 250px;
-    left: 7%;
     opacity: 0.5;
     filter: alpha(opacity=50); /* For IE8 and earlier */
+  }
+}
+
+/* Periscope */
+.periscope {
+  margin-top: 100px;
+  .siluet-content {
+    height: 640px;
+    background-image: url("../images/siluet-periscope.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+/* CONTENT */
+.content {
+  background-color: white;
+  height: 700px;
+  h2 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 28px;
+  }
+  p {
+    text-align: center;
+    padding-top: 20px;
   }
 }
 
@@ -114,4 +141,5 @@ a {
 //    filter: alpha(opacity=70); /* For IE8 and earlier */
 //  }
 //}
+
 
