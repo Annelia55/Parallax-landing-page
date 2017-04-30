@@ -163,19 +163,28 @@ a:hover {
 }
 /* line 76, ../sass/stylesheet.scss */
 .periscope .siluet-content {
+  position: relative;
+  overflow: hidden;
   height: 640px;
-  background-image: url("../images/siluet-periscope.png");
+  background-image: url("../images/bg-periscope2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+/* line 90, ../sass/stylesheet.scss */
+.periscope .siluet-content .siluet-content-img {
+  position: absolute;
+  bottom: 680px;
 }
 
 /* CONTENT */
-/* line 85, ../sass/stylesheet.scss */
+/* line 98, ../sass/stylesheet.scss */
 .content {
   background-color: white;
   height: 700px;
 }
-/* line 88, ../sass/stylesheet.scss */
+/* line 101, ../sass/stylesheet.scss */
 .content h2 {
   text-align: center;
   border-bottom: 1px solid black;
@@ -183,7 +192,7 @@ a:hover {
   padding-bottom: 20px;
   font-size: 28px;
 }
-/* line 95, ../sass/stylesheet.scss */
+/* line 108, ../sass/stylesheet.scss */
 .content p {
   text-align: center;
   padding-top: 20px;
