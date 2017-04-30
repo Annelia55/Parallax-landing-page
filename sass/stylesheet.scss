@@ -1,6 +1,8 @@
 @import "compass", "compass/reset", "compass/css3/font-face", "media-queries", "compass/css3/border-radius", "compass/css3/transition";
 
-@include font-face("???", font-files("???.ttf"));
+@include font-face("Antikvar.ttf", font-files("Antikvar.ttf.ttf"));
+
+$font-Antikvar: "Antikvar", cursive;
 
 /* for Bootstrap */
 .no-margin {margin: 0 !important}
@@ -19,21 +21,11 @@ a {
 
 /* CONTENT */
 .content {
-  background-color: white;
-  height: 1490px;
-  h2 {
-    text-align: center;
-    border-bottom: 1px solid black;
-    padding-top: 50px;
-    padding-bottom: 20px;
-    font-size: 28px;
-  }
-  p {
-    text-align: center;
-    padding-top: 20px;
-  }
+  height: 800px;
 }
-
+.container-fluid {
+  background-color: #f9f2f4;
+}
 /* HEADER PARALLAX */
 .model-box {
     position: relative; // !!! making it the anchor for header parallaxing elements
@@ -59,7 +51,7 @@ a {
     position: absolute;
     max-width: 630px;
     top: 110px;
-    right: 0px;
+    right: 0;
     bottom: 0;
   }
   .siluet {
@@ -72,12 +64,27 @@ a {
 
 /* Gallery-content */
 .gallery-content {
-  margin-top: 50px;
-
+  margin-top: 20px;
+  .title {
+    h2 {
+      font-family: $font-Antikvar;
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 10px;
+      font-size: 30px;
+    }
+    p {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
   /* Gallery */
   .gallery {
     img {
-      max-width: 250px;
+      float: right;
+      border: 1px solid rgba(121, 0, 60, 0.1);
+      border-radius: 10%;
+      margin-bottom: 30px;
     }
   }
 
@@ -93,6 +100,7 @@ a {
       background-attachment: fixed;
       border-top-right-radius: 50%;
       border-bottom-right-radius: 50%;
+      border: 1px solid rgba(121, 0, 60, 0.1);
 
       //USING BACKGROUND INSTEAD OF IMAGES
       //height: 640px;
@@ -104,31 +112,15 @@ a {
       .siluet-content-img {
         position: absolute;
         bottom: 680px;
+        opacity: 0.6;
+        filter: alpha(opacity=60); /* For IE8 and earlier */
       }
     }
   }
 }
 
 
-/* GALLERY */
 
-
-/* CONTENT */
-.content {
-  background-color: white;
-  height: 700px;
-  h2 {
-    text-align: center;
-    border-bottom: 1px solid black;
-    padding-top: 50px;
-    padding-bottom: 20px;
-    font-size: 28px;
-  }
-  p {
-    text-align: center;
-    padding-top: 20px;
-  }
-}
 
 //USING BACKGROUND INSTEAD OF IMAGES
 //.model-box {

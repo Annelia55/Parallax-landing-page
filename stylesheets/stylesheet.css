@@ -64,59 +64,50 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 @font-face {
-  font-family: "???";
-  src: url('../fonts/???.ttf') format('truetype');
+  font-family: "Antikvar.ttf";
+  src: url('../fonts/Antikvar.ttf.ttf') format('truetype');
 }
 /* for Bootstrap */
-/* line 6, ../sass/stylesheet.scss */
+/* line 8, ../sass/stylesheet.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 7, ../sass/stylesheet.scss */
+/* line 9, ../sass/stylesheet.scss */
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0;
 }
 
 /**/
-/* line 12, ../sass/stylesheet.scss */
+/* line 14, ../sass/stylesheet.scss */
 .left {
   float: left;
 }
 
-/* line 13, ../sass/stylesheet.scss */
+/* line 15, ../sass/stylesheet.scss */
 .right {
   float: right;
 }
 
-/* line 15, ../sass/stylesheet.scss */
+/* line 17, ../sass/stylesheet.scss */
 a:hover {
   text-decoration: none;
 }
 
 /* CONTENT */
-/* line 21, ../sass/stylesheet.scss */
+/* line 23, ../sass/stylesheet.scss */
 .content {
-  background-color: white;
-  height: 1490px;
+  height: 800px;
 }
-/* line 24, ../sass/stylesheet.scss */
-.content h2 {
-  text-align: center;
-  border-bottom: 1px solid black;
-  padding-top: 50px;
-  padding-bottom: 20px;
-  font-size: 28px;
-}
-/* line 31, ../sass/stylesheet.scss */
-.content p {
-  text-align: center;
-  padding-top: 20px;
+
+/* line 26, ../sass/stylesheet.scss */
+.container-fluid {
+  background-color: #f9f2f4;
 }
 
 /* HEADER PARALLAX */
-/* line 38, ../sass/stylesheet.scss */
+/* line 30, ../sass/stylesheet.scss */
 .model-box {
   position: relative;
   height: 540px;
@@ -127,7 +118,7 @@ a:hover {
   background-attachment: fixed;
   overflow: hidden;
 }
-/* line 47, ../sass/stylesheet.scss */
+/* line 39, ../sass/stylesheet.scss */
 .model-box .logo {
   height: 150px;
   width: 100%;
@@ -139,15 +130,15 @@ a:hover {
   margin-top: -75px;
   right: 1%;
 }
-/* line 58, ../sass/stylesheet.scss */
+/* line 50, ../sass/stylesheet.scss */
 .model-box .model {
   position: absolute;
   max-width: 630px;
   top: 110px;
-  right: 0px;
+  right: 0;
   bottom: 0;
 }
-/* line 65, ../sass/stylesheet.scss */
+/* line 57, ../sass/stylesheet.scss */
 .model-box .siluet {
   position: absolute;
   max-width: 250px;
@@ -157,21 +148,37 @@ a:hover {
 }
 
 /* Gallery-content */
-/* line 74, ../sass/stylesheet.scss */
+/* line 66, ../sass/stylesheet.scss */
 .gallery-content {
-  margin-top: 50px;
+  margin-top: 20px;
   /* Gallery */
   /* Periscope */
 }
-/* line 79, ../sass/stylesheet.scss */
-.gallery-content .gallery img {
-  max-width: 250px;
+/* line 69, ../sass/stylesheet.scss */
+.gallery-content .title h2 {
+  font-family: "Antikvar", cursive;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-size: 30px;
 }
-/* line 85, ../sass/stylesheet.scss */
+/* line 76, ../sass/stylesheet.scss */
+.gallery-content .title p {
+  text-align: center;
+  padding-bottom: 20px;
+}
+/* line 83, ../sass/stylesheet.scss */
+.gallery-content .gallery img {
+  float: right;
+  border: 1px solid rgba(121, 0, 60, 0.1);
+  border-radius: 10%;
+  margin-bottom: 30px;
+}
+/* line 92, ../sass/stylesheet.scss */
 .gallery-content .periscope {
   margin-top: 50px;
 }
-/* line 87, ../sass/stylesheet.scss */
+/* line 94, ../sass/stylesheet.scss */
 .gallery-content .periscope .siluet-content {
   position: relative;
   overflow: hidden;
@@ -181,30 +188,13 @@ a:hover {
   background-attachment: fixed;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
+  border: 1px solid rgba(121, 0, 60, 0.1);
 }
-/* line 104, ../sass/stylesheet.scss */
+/* line 112, ../sass/stylesheet.scss */
 .gallery-content .periscope .siluet-content .siluet-content-img {
   position: absolute;
   bottom: 680px;
-}
-
-/* GALLERY */
-/* CONTENT */
-/* line 117, ../sass/stylesheet.scss */
-.content {
-  background-color: white;
-  height: 700px;
-}
-/* line 120, ../sass/stylesheet.scss */
-.content h2 {
-  text-align: center;
-  border-bottom: 1px solid black;
-  padding-top: 50px;
-  padding-bottom: 20px;
-  font-size: 28px;
-}
-/* line 127, ../sass/stylesheet.scss */
-.content p {
-  text-align: center;
-  padding-top: 20px;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  /* For IE8 and earlier */
 }
