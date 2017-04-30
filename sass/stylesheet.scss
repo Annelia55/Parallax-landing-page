@@ -18,6 +18,10 @@ a {
     text-decoration: none;
   }
 }
+body {
+  font-family: "Jura", "san-serif";
+  line-height: 22px;
+}
 
 /* CONTENT */
 .content {
@@ -64,13 +68,13 @@ a {
 
 /* Gallery-content */
 .gallery-content {
-  margin-top: 20px;
+  margin-top: 10px;
   .title {
     h2 {
       font-family: $font-Antikvar;
       text-align: center;
       padding-top: 50px;
-      padding-bottom: 10px;
+      padding-bottom: 20px;
       font-size: 30px;
     }
     p {
@@ -85,12 +89,19 @@ a {
       border: 1px solid rgba(121, 0, 60, 0.1);
       border-radius: 10%;
       margin-bottom: 30px;
+      position: relative;
+      opacity: 0;
+      transform: translateX(30px); //images appeare from right
+      transition: all 0.8s ease-in-out;
+      &.is-showing {
+        opacity: 1;
+        transform: translateX(0px);
+      }
     }
   }
-
   /* Periscope */
   .periscope {
-    margin-top: 50px;
+    margin-top: 310px;
     .siluet-content {
       position: relative;
       overflow: hidden;
@@ -101,14 +112,6 @@ a {
       border-top-right-radius: 50%;
       border-bottom-right-radius: 50%;
       border: 1px solid rgba(121, 0, 60, 0.1);
-
-      //USING BACKGROUND INSTEAD OF IMAGES
-      //height: 640px;
-      //background-image: url("../images/siluet-periscope.png");
-      //background-repeat: no-repeat;
-      //background-attachment: fixed;
-      //margin-top: 100px;
-
       .siluet-content-img {
         position: absolute;
         bottom: 680px;

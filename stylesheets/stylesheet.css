@@ -95,19 +95,25 @@ a:hover {
   text-decoration: none;
 }
 
+/* line 21, ../sass/stylesheet.scss */
+body {
+  font-family: "Jura", "san-serif";
+  line-height: 22px;
+}
+
 /* CONTENT */
-/* line 23, ../sass/stylesheet.scss */
+/* line 27, ../sass/stylesheet.scss */
 .content {
   height: 800px;
 }
 
-/* line 26, ../sass/stylesheet.scss */
+/* line 30, ../sass/stylesheet.scss */
 .container-fluid {
   background-color: #f9f2f4;
 }
 
 /* HEADER PARALLAX */
-/* line 30, ../sass/stylesheet.scss */
+/* line 34, ../sass/stylesheet.scss */
 .model-box {
   position: relative;
   height: 540px;
@@ -118,7 +124,7 @@ a:hover {
   background-attachment: fixed;
   overflow: hidden;
 }
-/* line 39, ../sass/stylesheet.scss */
+/* line 43, ../sass/stylesheet.scss */
 .model-box .logo {
   height: 150px;
   width: 100%;
@@ -130,7 +136,7 @@ a:hover {
   margin-top: -75px;
   right: 1%;
 }
-/* line 50, ../sass/stylesheet.scss */
+/* line 54, ../sass/stylesheet.scss */
 .model-box .model {
   position: absolute;
   max-width: 630px;
@@ -138,7 +144,7 @@ a:hover {
   right: 0;
   bottom: 0;
 }
-/* line 57, ../sass/stylesheet.scss */
+/* line 61, ../sass/stylesheet.scss */
 .model-box .siluet {
   position: absolute;
   max-width: 250px;
@@ -148,37 +154,46 @@ a:hover {
 }
 
 /* Gallery-content */
-/* line 66, ../sass/stylesheet.scss */
+/* line 70, ../sass/stylesheet.scss */
 .gallery-content {
-  margin-top: 20px;
+  margin-top: 10px;
   /* Gallery */
   /* Periscope */
 }
-/* line 69, ../sass/stylesheet.scss */
+/* line 73, ../sass/stylesheet.scss */
 .gallery-content .title h2 {
   font-family: "Antikvar", cursive;
   text-align: center;
   padding-top: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   font-size: 30px;
 }
-/* line 76, ../sass/stylesheet.scss */
+/* line 80, ../sass/stylesheet.scss */
 .gallery-content .title p {
   text-align: center;
   padding-bottom: 20px;
 }
-/* line 83, ../sass/stylesheet.scss */
+/* line 87, ../sass/stylesheet.scss */
 .gallery-content .gallery img {
   float: right;
   border: 1px solid rgba(121, 0, 60, 0.1);
   border-radius: 10%;
   margin-bottom: 30px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s ease-in-out;
 }
-/* line 92, ../sass/stylesheet.scss */
+/* line 96, ../sass/stylesheet.scss */
+.gallery-content .gallery img.is-showing {
+  opacity: 1;
+  transform: translateX(0px);
+}
+/* line 103, ../sass/stylesheet.scss */
 .gallery-content .periscope {
-  margin-top: 50px;
+  margin-top: 310px;
 }
-/* line 94, ../sass/stylesheet.scss */
+/* line 105, ../sass/stylesheet.scss */
 .gallery-content .periscope .siluet-content {
   position: relative;
   overflow: hidden;
@@ -190,7 +205,7 @@ a:hover {
   border-bottom-right-radius: 50%;
   border: 1px solid rgba(121, 0, 60, 0.1);
 }
-/* line 112, ../sass/stylesheet.scss */
+/* line 115, ../sass/stylesheet.scss */
 .gallery-content .periscope .siluet-content .siluet-content-img {
   position: absolute;
   bottom: 680px;
