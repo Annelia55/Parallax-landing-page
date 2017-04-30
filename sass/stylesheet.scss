@@ -70,29 +70,48 @@ a {
   }
 }
 
-/* Periscope */
-.periscope {
-  margin-top: 100px;
-  .siluet-content {
-    position: relative;
-    overflow: hidden;
-    height: 640px;
-    background-image: url("../images/bg-periscope2.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    //height: 640px;
-    //background-image: url("../images/siluet-periscope.png");
-    //background-repeat: no-repeat;
-    //background-attachment: fixed;
-    //margin-top: 100px;
-    .siluet-content-img {
-      position: absolute;
-      bottom: 680px;
+/* Gallery-content */
+.gallery-content {
+  margin-top: 50px;
+
+  /* Gallery */
+  .gallery {
+    img {
+      max-width: 250px;
+    }
+  }
+
+  /* Periscope */
+  .periscope {
+    margin-top: 50px;
+    .siluet-content {
+      position: relative;
+      overflow: hidden;
+      height: 640px;
+      background-image: url("../images/bg-periscope2.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+
+      //USING BACKGROUND INSTEAD OF IMAGES
+      //height: 640px;
+      //background-image: url("../images/siluet-periscope.png");
+      //background-repeat: no-repeat;
+      //background-attachment: fixed;
+      //margin-top: 100px;
+
+      .siluet-content-img {
+        position: absolute;
+        bottom: 680px;
+      }
     }
   }
 }
+
+
+/* GALLERY */
+
 
 /* CONTENT */
 .content {

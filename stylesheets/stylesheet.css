@@ -156,13 +156,23 @@ a:hover {
   /* For IE8 and earlier */
 }
 
-/* Periscope */
+/* Gallery-content */
 /* line 74, ../sass/stylesheet.scss */
-.periscope {
-  margin-top: 100px;
+.gallery-content {
+  margin-top: 50px;
+  /* Gallery */
+  /* Periscope */
 }
-/* line 76, ../sass/stylesheet.scss */
-.periscope .siluet-content {
+/* line 79, ../sass/stylesheet.scss */
+.gallery-content .gallery img {
+  max-width: 250px;
+}
+/* line 85, ../sass/stylesheet.scss */
+.gallery-content .periscope {
+  margin-top: 50px;
+}
+/* line 87, ../sass/stylesheet.scss */
+.gallery-content .periscope .siluet-content {
   position: relative;
   overflow: hidden;
   height: 640px;
@@ -172,19 +182,20 @@ a:hover {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
 }
-/* line 90, ../sass/stylesheet.scss */
-.periscope .siluet-content .siluet-content-img {
+/* line 104, ../sass/stylesheet.scss */
+.gallery-content .periscope .siluet-content .siluet-content-img {
   position: absolute;
   bottom: 680px;
 }
 
+/* GALLERY */
 /* CONTENT */
-/* line 98, ../sass/stylesheet.scss */
+/* line 117, ../sass/stylesheet.scss */
 .content {
   background-color: white;
   height: 700px;
 }
-/* line 101, ../sass/stylesheet.scss */
+/* line 120, ../sass/stylesheet.scss */
 .content h2 {
   text-align: center;
   border-bottom: 1px solid black;
@@ -192,7 +203,7 @@ a:hover {
   padding-bottom: 20px;
   font-size: 28px;
 }
-/* line 108, ../sass/stylesheet.scss */
+/* line 127, ../sass/stylesheet.scss */
 .content p {
   text-align: center;
   padding-top: 20px;
