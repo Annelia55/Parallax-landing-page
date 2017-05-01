@@ -29,6 +29,11 @@ $(window).scroll(function(){
     }
 
     /* Periscope with price */
+    if(wScroll > $('.periscope-price').offset().top - $(window).height()){
+        var opacity = (wScroll - $('.periscope-price').offset().top + 400) / (wScroll / 5);
+        $('.promo-text').css({'opacity': opacity});
+    }
+
 
 });
 
