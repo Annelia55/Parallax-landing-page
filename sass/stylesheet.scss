@@ -3,6 +3,7 @@
 @include font-face("Antikvar.ttf", font-files("Antikvar.ttf.ttf"));
 
 $font-Antikvar: "Antikvar", cursive;
+$pink-border: 1px solid rgba(121, 0, 60, 0.1);
 
 /* for Bootstrap */
 .no-margin {margin: 0 !important}
@@ -84,18 +85,43 @@ body {
   }
   /* Gallery */
   .gallery {
-    img {
-      float: right;
-      border: 1px solid rgba(121, 0, 60, 0.1);
-      border-radius: 10%;
-      margin-bottom: 30px;
+    figure {
       position: relative;
+      overflow: hidden;
+      float: right;
+      margin-bottom: 30px;
+      padding-left: 0px;
       opacity: 0;
-      transform: translateX(30px); //images appeare from right
-      transition: all 0.8s ease-in-out;
+      transform: translateX(10px); //images appeare from right
+      transition: all 0.6s ease-in-out;
       &.is-showing {
         opacity: 1;
         transform: translateX(0px);
+      }
+      &:hover {
+        figcaption {
+          left: 0%;
+        }
+      }
+      img {
+        border: $pink-border;
+        border-radius: 30px;
+      }
+      figcaption {
+        position: absolute;
+        bottom: 0px;
+        left: -100%;
+        border: $pink-border;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;
+        background-color: #ffffff;
+        padding: 2px 20px;
+        font-size: 14px;
+        transition: all 0.3s ease-in-out;
+        .price {
+          font-weight: bold;
+          font-size: 16px;
+        }
       }
     }
   }
@@ -116,13 +142,11 @@ body {
         position: absolute;
         bottom: 680px;
         opacity: 0.6;
-        filter: alpha(opacity=60); /* For IE8 and earlier */
+        filter: alpha(opacity=60);
       }
     }
   }
 }
-
-
 
 
 //USING BACKGROUND INSTEAD OF IMAGES

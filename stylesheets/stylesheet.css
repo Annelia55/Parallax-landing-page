@@ -68,52 +68,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   src: url('../fonts/Antikvar.ttf.ttf') format('truetype');
 }
 /* for Bootstrap */
-/* line 8, ../sass/stylesheet.scss */
+/* line 9, ../sass/stylesheet.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 9, ../sass/stylesheet.scss */
+/* line 10, ../sass/stylesheet.scss */
 .no-gutter > [class*='col-'] {
   padding-right: 0;
   padding-left: 0;
 }
 
 /**/
-/* line 14, ../sass/stylesheet.scss */
+/* line 15, ../sass/stylesheet.scss */
 .left {
   float: left;
 }
 
-/* line 15, ../sass/stylesheet.scss */
+/* line 16, ../sass/stylesheet.scss */
 .right {
   float: right;
 }
 
-/* line 17, ../sass/stylesheet.scss */
+/* line 18, ../sass/stylesheet.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 21, ../sass/stylesheet.scss */
+/* line 22, ../sass/stylesheet.scss */
 body {
   font-family: "Jura", "san-serif";
   line-height: 22px;
 }
 
 /* CONTENT */
-/* line 27, ../sass/stylesheet.scss */
+/* line 28, ../sass/stylesheet.scss */
 .content {
   height: 800px;
 }
 
-/* line 30, ../sass/stylesheet.scss */
+/* line 31, ../sass/stylesheet.scss */
 .container-fluid {
   background-color: #f9f2f4;
 }
 
 /* HEADER PARALLAX */
-/* line 34, ../sass/stylesheet.scss */
+/* line 35, ../sass/stylesheet.scss */
 .model-box {
   position: relative;
   height: 540px;
@@ -124,7 +124,7 @@ body {
   background-attachment: fixed;
   overflow: hidden;
 }
-/* line 43, ../sass/stylesheet.scss */
+/* line 44, ../sass/stylesheet.scss */
 .model-box .logo {
   height: 150px;
   width: 100%;
@@ -136,7 +136,7 @@ body {
   margin-top: -75px;
   right: 1%;
 }
-/* line 54, ../sass/stylesheet.scss */
+/* line 55, ../sass/stylesheet.scss */
 .model-box .model {
   position: absolute;
   max-width: 630px;
@@ -144,7 +144,7 @@ body {
   right: 0;
   bottom: 0;
 }
-/* line 61, ../sass/stylesheet.scss */
+/* line 62, ../sass/stylesheet.scss */
 .model-box .siluet {
   position: absolute;
   max-width: 250px;
@@ -154,13 +154,13 @@ body {
 }
 
 /* Gallery-content */
-/* line 70, ../sass/stylesheet.scss */
+/* line 71, ../sass/stylesheet.scss */
 .gallery-content {
   margin-top: 10px;
   /* Gallery */
   /* Periscope */
 }
-/* line 73, ../sass/stylesheet.scss */
+/* line 74, ../sass/stylesheet.scss */
 .gallery-content .title h2 {
   font-family: "Antikvar", cursive;
   text-align: center;
@@ -168,32 +168,59 @@ body {
   padding-bottom: 20px;
   font-size: 30px;
 }
-/* line 80, ../sass/stylesheet.scss */
+/* line 81, ../sass/stylesheet.scss */
 .gallery-content .title p {
   text-align: center;
   padding-bottom: 20px;
 }
-/* line 87, ../sass/stylesheet.scss */
-.gallery-content .gallery img {
-  float: right;
-  border: 1px solid rgba(121, 0, 60, 0.1);
-  border-radius: 10%;
-  margin-bottom: 30px;
+/* line 88, ../sass/stylesheet.scss */
+.gallery-content .gallery figure {
   position: relative;
+  overflow: hidden;
+  float: right;
+  margin-bottom: 30px;
+  padding-left: 0px;
   opacity: 0;
-  transform: translateX(30px);
-  transition: all 0.8s ease-in-out;
+  transform: translateX(10px);
+  transition: all 0.6s ease-in-out;
 }
-/* line 96, ../sass/stylesheet.scss */
-.gallery-content .gallery img.is-showing {
+/* line 97, ../sass/stylesheet.scss */
+.gallery-content .gallery figure.is-showing {
   opacity: 1;
   transform: translateX(0px);
 }
-/* line 103, ../sass/stylesheet.scss */
+/* line 102, ../sass/stylesheet.scss */
+.gallery-content .gallery figure:hover figcaption {
+  left: 0%;
+}
+/* line 106, ../sass/stylesheet.scss */
+.gallery-content .gallery figure img {
+  border: 1px solid rgba(121, 0, 60, 0.1);
+  border-radius: 30px;
+}
+/* line 110, ../sass/stylesheet.scss */
+.gallery-content .gallery figure figcaption {
+  position: absolute;
+  bottom: 0px;
+  left: -100%;
+  border: 1px solid rgba(121, 0, 60, 0.1);
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #ffffff;
+  padding: 2px 20px;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+/* line 121, ../sass/stylesheet.scss */
+.gallery-content .gallery figure figcaption .price {
+  font-weight: bold;
+  font-size: 16px;
+}
+/* line 129, ../sass/stylesheet.scss */
 .gallery-content .periscope {
   margin-top: 310px;
 }
-/* line 105, ../sass/stylesheet.scss */
+/* line 131, ../sass/stylesheet.scss */
 .gallery-content .periscope .siluet-content {
   position: relative;
   overflow: hidden;
@@ -205,11 +232,10 @@ body {
   border-bottom-right-radius: 50%;
   border: 1px solid rgba(121, 0, 60, 0.1);
 }
-/* line 115, ../sass/stylesheet.scss */
+/* line 141, ../sass/stylesheet.scss */
 .gallery-content .periscope .siluet-content .siluet-content-img {
   position: absolute;
   bottom: 680px;
   opacity: 0.6;
   filter: alpha(opacity=60);
-  /* For IE8 and earlier */
 }
