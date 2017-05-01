@@ -180,19 +180,63 @@ body {
 
 /* PERISCOPE WITH PRICE */
 .periscope-price-section {
+  position: relative;
   margin-top: 50px;
   .periscope-price {
     position: relative;
     overflow: hidden;
     height: 480px;
-    border: 1px solid rgba(121, 0, 60, 0.1);
+    border: $pink-border;
     @include border-radius(50%);
     background-image: url("../images/periscope-price-model.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;
+    .promo-text {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      @include border-radius(50%);
+      text-align: center;
+      background-color: rgba(0,0,0,0.6);
+      //background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center; //alignment of flex items
+      align-items: center;
+      .promo-title {
+        font-family: $font-Antikvar;
+        font-size: 42px;
+        line-height: 1.5;
+      }
+      .from-style {
+        font-weight: 300;
+        font-size: 18px;
+        font-style: italic;
+        color: rgba(255,255,255,0.8);
+      }
+      .promo-price {
+        font-size: 26px;
+        font-weight: bold;
+        letter-spacing: -1.5px;
+      }
+      a {
+        font-size: 18px;
+        text-decoration: none;
+        border: 1px solid white;
+        color: white;
+        padding: 10px 15px;
+        @include transition(.4s);
+        &:hover {
+          color: black;
+          background-color: rgba(255, 255, 255, 0.8);
+          @include transition(.3s);
+        }
+      }
+    }
   }
-
 }
 
 

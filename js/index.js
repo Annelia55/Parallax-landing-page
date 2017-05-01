@@ -25,7 +25,10 @@ $(window).scroll(function(){
         setTimeout(function(){              //(i) => means each one
             $('.gallery figure').eq(i).addClass('is-showing');  //eq() => means look at the index and find the right one
         }, 250 * (i + 1));    //set the time interval
-    });
-}
+        });
+    }
+
+    /* Periscope with price */
 
 });
+
