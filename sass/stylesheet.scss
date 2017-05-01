@@ -1,6 +1,13 @@
-@import "compass", "compass/reset", "compass/css3/font-face", "media-queries", "compass/css3/border-radius", "compass/css3/transition";
+@import "compass", "compass/reset", "compass/css3/font-face", "media-queries", "compass/css3/border-radius", "compass/css3/transition", "compass/css3/opacity";
 
 @include font-face("Antikvar.ttf", font-files("Antikvar.ttf.ttf"));
+
+@mixin transition($time) {
+  -webkit-transition: all ease-in-out $time;
+     -moz-transition: all ease-in-out $time;
+       -o-transition: all ease-in-out $time;
+          transition: all ease-in-out $time;
+}
 
 $font-Antikvar: "Antikvar", cursive;
 $pink-border: 1px solid rgba(121, 0, 60, 0.1);
@@ -25,9 +32,6 @@ body {
 }
 
 /* CONTENT */
-.content {
-  height: 800px;
-}
 .container-fluid {
   background-color: #f9f2f4;
 }
@@ -62,8 +66,7 @@ body {
   .siluet {
     position: absolute;
     max-width: 250px;
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+    @include opacity(0.5);
   }
 }
 
@@ -83,55 +86,13 @@ body {
       padding-bottom: 20px;
     }
   }
-  /* Gallery */
-  .gallery {
-    figure {
-      position: relative;
-      overflow: hidden;
-      float: right;
-      margin-bottom: 30px;
-      padding-left: 0px;
-      opacity: 0;
-      transform: translateX(10px); //images appeare from right
-      transition: all 0.6s ease-in-out;
-      &.is-showing {
-        opacity: 1;
-        transform: translateX(0px);
-      }
-      &:hover {
-        figcaption {
-          left: 0%;
-        }
-      }
-      img {
-        border: $pink-border;
-        border-radius: 30px;
-      }
-      figcaption {
-        position: absolute;
-        bottom: 0px;
-        left: -100%;
-        border: $pink-border;
-        border-bottom-left-radius: 30px;
-        border-top-right-radius: 30px;
-        background-color: #ffffff;
-        padding: 2px 20px;
-        font-size: 14px;
-        transition: all 0.3s ease-in-out;
-        .price {
-          font-weight: bold;
-          font-size: 16px;
-        }
-      }
-    }
-  }
   /* Periscope */
   .periscope {
-    margin-top: 310px;
+    margin-top: 150px;
     .siluet-content {
       position: relative;
       overflow: hidden;
-      height: 640px;
+      height: 720px;
       background-image: url("../images/bg-periscope2.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -140,10 +101,85 @@ body {
       border: 1px solid rgba(121, 0, 60, 0.1);
       .siluet-content-img {
         position: absolute;
+        left: 15px;
         bottom: 680px;
-        opacity: 0.6;
-        filter: alpha(opacity=60);
+        max-width: 250px;
+        @include opacity(0.6);
       }
+    }
+  }
+  /* Gallery */
+  .gallery {
+    figure {
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      float: right;
+      margin-bottom: 30px;
+      @include opacity(0);
+      transform: translateX(10px);  //images appeare from right
+      @include transition(.6s);
+      &:hover {
+        figcaption {
+          left: 0%;   //figcaption appears from the left
+        }
+        img {
+          transform: scale(1.17); //zooming images on hover
+          @include transition(.5s); //make zooming smooth
+          border: $pink-border;
+          border-radius: 10px;
+        }
+      }
+      &.is-showing {
+        @include opacity(1);
+        transform: translateX(0px);
+      }
+      img {
+        @include transition(.5s);
+        border: $pink-border;
+        border-radius: 10px;
+        transform: scale(1);   //zooming images
+      }
+      figcaption {
+        position: absolute;
+        bottom: 0px;
+        left: -100%;  //figcaption appears from the left
+        border-top: $pink-border;
+        border-right: $pink-border;
+        border-top-right-radius: 30px;
+        background-color: #ffffff;
+        padding: 2px 20px;
+        font-size: 14px;
+        @include transition(.3s);
+        @include opacity(0.85);
+        .price {
+          font-weight: bold;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+/* Periscope-footer */
+.periscope-footer {
+  margin-top: 100px;
+  .siluet-content-footer {
+    position: relative;
+    overflow: hidden;
+    height: 620px;
+    background-image: url("../images/bg-periscope2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: 1px solid rgba(121, 0, 60, 0.1);
+    .siluet-content-img-footer {
+      position: absolute;
+      left: 15px;
+      bottom: 680px;
+      max-width: 250px;
+      @include opacity(0.6);
     }
   }
 }
@@ -188,8 +224,7 @@ body {
 //    position: absolute;
 //    top: 10px;
 //    left: 5%;
-//    opacity: 0.7;
-//    filter: alpha(opacity=70); /* For IE8 and earlier */
+//    @include opacity(0.7);
 //  }
 //}
 
