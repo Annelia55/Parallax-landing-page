@@ -40,6 +40,7 @@ body {
 
 /* CONTENT */
 .container-fluid {
+  margin-bottom: 220px;
   background-color: #f9f2f4;
 }
 /* HEADER PARALLAX */
@@ -201,7 +202,6 @@ body {
       @include border-radius(50%);
       text-align: center;
       background-color: rgba(0,0,0,0.6);
-      //background-color: black;
       color: white;
       display: flex;
       justify-content: center; //alignment of flex items
@@ -242,6 +242,7 @@ body {
 /* FLOATING SECTION */
 .floating-section {
   margin-top: 40px;
+  margin-bottom: 100px;
   position: relative;
   img {
     max-width: 100px;
@@ -257,55 +258,46 @@ body {
   }
 }
 
-
-
-.footer {
-  height: 800px;
+/* FOOTER */
+.footer-section {
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: center; //alignment of flex items
+  p {
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  a {
+    color: #000000;
+    @include transition(.3s);
+    &:hover {
+      font-size: 18px;
+      font-weight: bold;
+      @include transition(.3s);
+    }
+  }
+  .btn-footer {
+    background-color: #f9f2f4;
+    border: 1px solid rgba(221, 222, 222, 0.87);
+    @include transition(.2s);
+    &:hover {
+      background-color: #f9f2f4;
+      text-transform: uppercase;
+      background-color: rgba(249, 242, 244, 0.5);
+      @include transition(.3s);
+    }
+  }
+  input {
+    max-width: 150px;
+  }
 }
 
-
-
-//USING BACKGROUND INSTEAD OF IMAGES
-//.model-box {
-//  position: relative; // !!! making it the anchor for header parallaxing elements
-//  height: 500px;
-//  background-image: url(../images/bg-header.jpg);
-//  background-repeat: no-repeat;
-//  background-size: cover;
-//  background-position: top center;
-//  background-attachment: fixed;
-//  overflow: hidden; // !!! hide parts of parallaxing elements
-//  .logo {
-//    height: 150px;
-//    width: 100%;
-//    background-image: url(../images/logo-sm.png);
-//    background-repeat: no-repeat;
-//    background-position: center;
-//    position: absolute;
-//    top: 35%;
-//    margin-top: -75px;
-//    right: 1%;
-//  }
-//  .model {
-//    width: 636px;
-//    height: 600px;
-//    background-image: url(../images/model.png);
-//    background-repeat: no-repeat;
-//    position: absolute;
-//    left: 56%;
-//    top: 85px;
-//  }
-//  .siluet {
-//    width: 270px;
-//    height: 695px;
-//    background-image: url(../images/siluet-sm.png);
-//    background-repeat: no-repeat;
-//    background-position: top left;
-//    position: absolute;
-//    top: 10px;
-//    left: 5%;
-//    @include opacity(0.7);
-//  }
-//}
 
 

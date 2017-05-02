@@ -39,6 +39,15 @@ $(window).scroll(function(){
 
         var offset = (Math.min(0, wScroll - $('.floating-section').offset().top + $(window).height() - 250));  //Math.min(0) => makes the image stop at the end of div
 
+        // ========
+        //var floatTop = $('.floating-section').offset().top;
+        //var height = $(window).height();
+        //var offset = wScroll - floatTop + height - 250;  //Math.min(0) => makes the image stop at the end of div
+        //console.log("floating-section.top: " + floatTop + ", window.height: " + height, ", wScroll: " + wScroll );
+        //console.log(offset);
+        // ========
+
+
         //$('.arrow-left').css({ 'transform' : 'translate('+ offset +'px, 30px)' });             //left and ...
         //$('.arrow-right').css({ 'transform' : 'translate('+ Math.abs(offset) +'px, 30px)' });  // right arrows will fly horisontally
 
@@ -46,4 +55,5 @@ $(window).scroll(function(){
         $('.arrow-right').css({ 'transform' : 'translate('+ Math.abs(offset) +'px, ' + Math.abs(offset * 0.6) + 'px)' });  // right arrows will fly on diagonal
     }
 });
+
 
