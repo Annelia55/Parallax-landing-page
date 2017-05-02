@@ -1,4 +1,3 @@
-// Paarallax header
 $(window).scroll(function(){
 
     var wScroll = $(this).scrollTop(); // this = window. It tells how far it is scrolled from the top
@@ -19,7 +18,8 @@ $(window).scroll(function(){
         'transform' : 'translate(0px, '+ wScroll /6 +'%)'
     });
 
-    /* Gallery */
+
+    /*----- Gallery -----*/
     if(wScroll > $('.gallery').offset().top - ($(window).height() / 2.2)){
     $('.gallery figure').each(function(i){   //show each image while scrolling
         setTimeout(function(){              //(i) => means each one
@@ -28,25 +28,18 @@ $(window).scroll(function(){
         });
     }
 
-    /* Periscope with price */
+
+    /*----- Periscope with price -----*/
     if(wScroll > $('.periscope-price').offset().top - $(window).height()){
         var opacity = (wScroll - $('.periscope-price').offset().top + 400) / (wScroll / 5);
         $('.promo-text').css({'opacity': opacity});
     }
 
-    /* Floating section */
+
+    /*----- Floating section -----*/
     if(wScroll > $('.floating-section').offset().top - $(window).height()){
 
         var offset = (Math.min(0, wScroll - $('.floating-section').offset().top + $(window).height() - 250));  //Math.min(0) => makes the image stop at the end of div
-
-        // ========
-        //var floatTop = $('.floating-section').offset().top;
-        //var height = $(window).height();
-        //var offset = wScroll - floatTop + height - 250;  //Math.min(0) => makes the image stop at the end of div
-        //console.log("floating-section.top: " + floatTop + ", window.height: " + height, ", wScroll: " + wScroll );
-        //console.log(offset);
-        // ========
-
 
         //$('.arrow-left').css({ 'transform' : 'translate('+ offset +'px, 30px)' });             //left and ...
         //$('.arrow-right').css({ 'transform' : 'translate('+ Math.abs(offset) +'px, 30px)' });  // right arrows will fly horisontally

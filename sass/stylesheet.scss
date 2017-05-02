@@ -46,7 +46,7 @@ body {
 /* HEADER PARALLAX */
 .model-box {
     position: relative; // !!! making it the anchor for header parallaxing elements
-    overflow: hidden; // !!! hide parts of parallaxing elements
+    overflow: hidden;   // !!! hide parts of parallaxing elements
     height: 540px;
     background-image: url(../images/bg-header.jpg);
     background-repeat: no-repeat;
@@ -55,21 +55,22 @@ body {
     background-attachment: fixed;
   .logo {
     position: absolute;
-      height: 150px;
-      width: 100%;
-      margin-top: -75px;
-      top: 35%;
-      right: 1%;
-      background-image: url(../images/logo-sm.png);
-      background-repeat: no-repeat;
-      background-position: center;
+    height: 150px;
+    width: 120%;
+    margin-top: -75px;
+    top: 35%;
+    right: 1%;
+    background-image: url(../images/logo-sm.png);
+    background-repeat: no-repeat;
+    background-position: center;
     }
   .model {
     position: absolute;
     max-width: 630px;
-    top: 110px;
+    top: 27%;
     right: 0;
     bottom: 0;
+    padding: 0;
   }
   .siluet {
     position: absolute;
@@ -242,6 +243,7 @@ body {
 /* FLOATING SECTION */
 .floating-section {
   margin-top: 40px;
+  overflow: hidden;
   margin-bottom: 100px;
   position: relative;
   img {
@@ -298,6 +300,62 @@ body {
     max-width: 150px;
   }
 }
+
+/* @media */
+@include mq($max-width: 1060px) {
+  .gallery-content {
+    /* Gallery */
+    .gallery {
+      figure {
+        padding-left: 0;
+        figcaption {
+          font-size: 12px;
+          .price {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@include mq($max-width: 991px) {
+  /* HEADER PARALLAX */
+  .model-box {
+    height: 500px;
+    .logo {
+      width: 120%;
+      top: 35%;
+    }
+    .model {
+      max-width: 500px;
+      top: 31%;
+    }
+    .siluet {
+      max-width: 200px;
+      top: 17%;
+    }
+  }
+  /* Gallery-content */
+  .gallery-content {
+    margin-top: 10px;
+    /* Periscope */
+    .periscope {
+      margin-top: 100px;
+      .siluet-content {
+        height: 700px;
+        .siluet-content-img {
+          max-width: 200px;
+          bottom: 700px;
+          left: 0;
+        }
+      }
+    }
+    .text-section {
+      margin-top: 20px;
+    }
+  }
+}
+
 
 
 
