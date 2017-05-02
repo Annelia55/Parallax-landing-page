@@ -34,6 +34,16 @@ $(window).scroll(function(){
         $('.promo-text').css({'opacity': opacity});
     }
 
+    /* Floating section */
+    if(wScroll > $('.floating-section').offset().top - $(window).height()){
 
+        var offset = (Math.min(0, wScroll - $('.floating-section').offset().top + $(window).height() - 250));  //Math.min(0) => makes the image stop at the end of div
+
+        //$('.arrow-left').css({ 'transform' : 'translate('+ offset +'px, 30px)' });             //left and ...
+        //$('.arrow-right').css({ 'transform' : 'translate('+ Math.abs(offset) +'px, 30px)' });  // right arrows will fly horisontally
+
+        $('.arrow-left').css({ 'transform' : 'translate('+ offset +'px, ' + Math.abs(offset * 0.6) + 'px)' });             //left and ...
+        $('.arrow-right').css({ 'transform' : 'translate('+ Math.abs(offset) +'px, ' + Math.abs(offset * 0.6) + 'px)' });  // right arrows will fly on diagonal
+    }
 });
 

@@ -47,7 +47,7 @@ body {
     position: relative; // !!! making it the anchor for header parallaxing elements
     overflow: hidden; // !!! hide parts of parallaxing elements
     height: 540px;
-    background-image: url(../images/bg-header-2.jpg);
+    background-image: url(../images/bg-header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -101,7 +101,7 @@ body {
       border-top-right-radius: 50%;
       border-bottom-right-radius: 50%;
       border: 1px solid rgba(121, 0, 60, 0.1);
-      background-image: url("../images/bg-periscope2.jpg");
+      background-image: url("../images/bg-periscope.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
       .siluet-content-img {
@@ -239,7 +239,23 @@ body {
   }
 }
 
-
+/* FLOATING SECTION */
+.floating-section {
+  margin-top: 40px;
+  position: relative;
+  img {
+    max-width: 100px;
+  }
+  p {
+    text-align: center;
+  }
+  .arrow-left {
+    transform: translate(100px, 20px);
+  }
+  .arrow-right {
+    transform: translate(-100px, 20px);
+  }
+}
 
 
 
