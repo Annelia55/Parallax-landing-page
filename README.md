@@ -1,7 +1,7 @@
 # Parallax-landing-page
 Landing page with parallax effects. Created with Bootstrap 3 and Sass. Mobile friendly
-=> [Visit site](https://rawgit.com/anelliabe/Parallax-landing-page/master/index.html)
+=> [Visit site](https://rawgit.com/atanyday/Parallax-landing-page/master/index.html)
 <br>
-=> [Demo video](https://youtu.be/ON6HWBPIdPg?list=PLE3Col1EpD_1RNo0HncnqJr1VfN2TpuzC)
+=> [Demo video](https://youtu.be/UBt6lz7vXXI?list=PLfslS7IBS7XccqD7Yet2KDusjarx1G2Lv)
 <br>
 ![Picture](Main.jpg)
